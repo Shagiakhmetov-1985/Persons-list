@@ -13,8 +13,7 @@ class PersonListOneViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 60
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.rowHeight = 50
     }
 
     // MARK: - Table view data source

@@ -17,7 +17,6 @@
 		797385B02626319300BBA655 /* PersonListOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797385AF2626319300BBA655 /* PersonListOneViewController.swift */; };
 		797385B3262631B400BBA655 /* PersonListTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797385B2262631B400BBA655 /* PersonListTwoViewController.swift */; };
 		797385B72626CA4300BBA655 /* PersonDetailsOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797385B62626CA4300BBA655 /* PersonDetailsOneViewController.swift */; };
-		797385BA2626CA8900BBA655 /* PersonDetailsTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797385B92626CA8900BBA655 /* PersonDetailsTwoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		797385AF2626319300BBA655 /* PersonListOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListOneViewController.swift; sourceTree = "<group>"; };
 		797385B2262631B400BBA655 /* PersonListTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListTwoViewController.swift; sourceTree = "<group>"; };
 		797385B62626CA4300BBA655 /* PersonDetailsOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsOneViewController.swift; sourceTree = "<group>"; };
-		797385B92626CA8900BBA655 /* PersonDetailsTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsTwoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 				797385972625F89300BBA655 /* SceneDelegate.swift */,
 				797385992625F89300BBA655 /* StartViewController.swift */,
 				797385B62626CA4300BBA655 /* PersonDetailsOneViewController.swift */,
-				797385B92626CA8900BBA655 /* PersonDetailsTwoViewController.swift */,
 				797385AF2626319300BBA655 /* PersonListOneViewController.swift */,
 				797385B2262631B400BBA655 /* PersonListTwoViewController.swift */,
 				797385AB2626187D00BBA655 /* Persons.swift */,
@@ -157,7 +154,6 @@
 				797385AC2626187D00BBA655 /* Persons.swift in Sources */,
 				797385982625F89300BBA655 /* SceneDelegate.swift in Sources */,
 				797385B3262631B400BBA655 /* PersonListTwoViewController.swift in Sources */,
-				797385BA2626CA8900BBA655 /* PersonDetailsTwoViewController.swift in Sources */,
 				797385B02626319300BBA655 /* PersonListOneViewController.swift in Sources */,
 				797385B72626CA4300BBA655 /* PersonDetailsOneViewController.swift in Sources */,
 			);

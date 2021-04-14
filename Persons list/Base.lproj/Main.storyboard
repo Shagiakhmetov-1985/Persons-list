@@ -84,7 +84,7 @@
                             <constraint firstItem="DnB-7L-175" firstAttribute="top" secondItem="Nlv-5a-vgW" secondAttribute="top" constant="22" id="bkG-h4-90K"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qSO-GV-9mO"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="qSO-GV-9mO"/>
                     <connections>
                         <outlet property="labelEmail" destination="rcr-WI-cIk" id="nsa-gJ-Htv"/>
                         <outlet property="labelPhone" destination="HHs-Yn-1Qx" id="fly-12-Uxt"/>
@@ -103,16 +103,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personNameTwo" id="u5b-5N-LJe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personNameRowOne" textLabel="rDO-8o-oju" style="IBUITableViewCellStyleDefault" id="u5b-5N-LJe">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u5b-5N-LJe" id="W97-Gp-4BN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rDO-8o-oju">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Edi-JS-xw8" kind="show" id="WDk-hx-E0S"/>
-                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personNameRowTwo" textLabel="EcF-6F-4wU" style="IBUITableViewCellStyleDefault" id="vWj-fM-eAa">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vWj-fM-eAa" id="vHP-3I-yfL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EcF-6F-4wU">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -125,22 +148,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQ4-aF-dNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1386" y="447"/>
-        </scene>
-        <!--Person Details Two View Controller-->
-        <scene sceneID="KAA-Bf-Oe8">
-            <objects>
-                <viewController id="Edi-JS-xw8" customClass="PersonDetailsTwoViewController" customModule="Persons_list" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WNs-Rd-rM7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="qs8-Fb-j7b"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="v6P-Xc-IQZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I6x-gI-4pq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2141" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VSk-aN-DD2">
@@ -164,8 +171,8 @@
             <objects>
                 <navigationController id="bLN-3N-LH9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="Pb7-Wy-iKD"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YBz-ph-Xq1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="YBz-ph-Xq1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

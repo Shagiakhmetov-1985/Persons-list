@@ -14,6 +14,10 @@ struct Person {
     var title: String {
         "\(name) \(surname)"
     }
+    
+    var phoneAndEmail: [String] {
+        [phone, email]
+    }
 }
 
 class DataManager {
