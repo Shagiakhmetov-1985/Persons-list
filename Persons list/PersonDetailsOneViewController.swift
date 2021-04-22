@@ -18,6 +18,6 @@ class PersonDetailsOneViewController: UIViewController {
         super.viewDidLoad()
         labelPhone.text = person.phone
         labelEmail.text = person.email
-        navigationItem.title = person.title
+        title = person.fullName
     }
 }

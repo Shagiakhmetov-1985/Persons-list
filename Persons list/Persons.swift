@@ -11,7 +11,7 @@ struct Person {
     var email: String
     var phone: String
     
-    var title: String {
+    var fullName: String {
         "\(name) \(surname)"
     }
     
@@ -20,29 +20,35 @@ struct Person {
     }
 }
 
-class DataManager {
+extension Person {
     static func getPersonList() -> [Person] {
-        var dataManagers: [Person] = []
-        let names: Set = ["Bruce", "John", "Steven", "Aaron", "Tim", "Allan",
-                          "Sharon", "Ted", "Carl", "Nicola"]
-        let surnames: Set = ["Butler", "Smith", "Black", "Robertson", "Murphy",
-                             "Williams", "Isaacson", "Jankin", "Peniworth", "Dow"]
-        let emails: Set = ["butler@gmail.com", "smith@gmail.com", "black@gmail.com",
-                           "robertson@gmail.com", "murphy@gmail.com", "willians@gmail.com",
-                           "isaacson@gmail.com", "jankin@gmail.com", "peniworth@gmail.com",
-                           "dow@gmail.com"]
-        let phones: Set = ["437651245", "438731094", "779401841", "116396120",
-                           "557014592", "458304911", "894914954", "668360120",
-                           "435609912", "773450912"]
         
-        for index in 0...Array(names).count - 1 {
-            let person = Person(name: Array(names)[index],
-                   surname: Array(surnames)[index],
-                   email: Array(emails)[index],
-                   phone: Array(phones)[index])
+        var dataManagers: [Person] = []
+        
+        let names = DataManager.shared.names.shuffled()
+        let surnames = DataManager.shared.surnames.shuffled()
+        let emails = DataManager.shared.emails.shuffled()
+        let phones = DataManager.shared.phones.shuffled()
+        
+        let iterationCount = min(names.count, surnames.count, emails.count, phones.count)
+        
+        for index in 0..<iterationCount {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                email: emails[index],
+                phone: phones[index]
+            )
+            
             dataManagers.append(person)
         }
         
         return dataManagers
     }
+}
+
+struct Images {
+    static var image = [
+        "phone", "tray"
+    ]
 }

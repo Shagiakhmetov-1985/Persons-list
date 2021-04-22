@@ -9,7 +9,7 @@ import UIKit
 
 class PersonListOneViewController: UITableViewController {
 
-    private var personList = DataManager.getPersonList()
+    var personList: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +20,13 @@ class PersonListOneViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         personList.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personNameOne", for: indexPath)
         let person = personList[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-        content.text = person.title
+        content.text = person.fullName
         cell.contentConfiguration = content
         
         return cell

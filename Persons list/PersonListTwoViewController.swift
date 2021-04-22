@@ -9,10 +9,13 @@ import UIKit
 
 class PersonListTwoViewController: UITableViewController {
     
-    private var personList = DataManager.getPersonList()
-    private let images = [UIImage(systemName: "phone"), UIImage(systemName: "tray")]
+    var personList: [Person] = []
+    private let images = Images.image
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 50
+        tableView.sectionHeaderHeight = 30
     }
 
     // MARK: - Table view data source
@@ -24,23 +27,16 @@ class PersonListTwoViewController: UITableViewController {
         personList.count
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        30
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        50
-    }
-    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        personList[section].title
+        personList[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personNameRowOne", for: indexPath)
         
         cell.textLabel?.text = personList[indexPath.section].phoneAndEmail[indexPath.row]
-        cell.imageView?.image = images[indexPath.row]
+        cell.imageView?.image = UIImage(systemName: images[indexPath.row])
+        
         return cell
     }
     // MARK: - Table view delegate
